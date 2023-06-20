@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Paciente</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= '{% static "assets/css/main.css" %}'/>
+
+		<!-- Codigo para no guardar caché, borrarlo cuando la pagina del hospital este lista -->
+		<meta http-equiv="Expires" content="0">
+ 		<meta http-equiv="Last-Modified" content="0">
+ 		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+ 		<meta http-equiv="Pragma" content="no-cache">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1>Bienvenido</h1>
+							<p>La mejor atención que podrás encontrar</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Magna veroeros</a></li>
+										<li><a href="#">Etiam nisl</a></li>
+										<li>
+											<a href="#">Sed consequat</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Amet consequat</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Sed feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Nisl tempus</a></li>
+									</ul>
+								</li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title">Que somos</div>
+					<div class="container">
+						<p class="style1">Un hospital transparente para todo el mundo...</p>
+						<p class="style2">
+							¡Una gran opción para poder atenderte como paciente y una gran alternativa
+							para los especialistas independientes!
+						</p>
+						
+						<ul class="actions">
+							<li><a href="{% url 'hora' %}" class="button style3 large">Ver mis horas</a></li>
+						</ul>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Caracteristicas</div>
+					<div class="container">
+
+						<!-- Image -->
+							<a href="#" class="image featured">
+								<img src="images/pic01.jpg" alt="" />
+							</a>
+
+						<!-- Features -->
+							<section id="features">
+								<header class="style1">
+									<h2>Al ser un hospital independiente...</h2>
+									<p>ofrecemos cosas que nuestra competencia no:</p>
+								</header>
+								<div class="feature-list">
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon fa-comment">Comunicación</h3>
+												<p>Nuestros clientes pueden comunicarse con nosotros y aprender sobre las áreas en las cuales se atenderá.
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-sync">Eficaces</h3>
+												<p>Equipo de trabajo capacitado para ayudarte en todo lo que necesites.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-wrench">Resolucion de problemas</h3>
+												<p>Ante cualquier problema, te atenderemos de la manera correcta para solucionar el mismo de la mejor manera posible.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-check">Facilidad</h3>
+												<p>Sistema intuitivo, tanto como para los clientes como para nuestros trabajadores.</p>
+											</section>
+										</div>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><a href="{% url 'agendar' %}" class="button style1 large">Atiendete</a></li>
+									<li><a href="#" class="button style2 large">Más información</a></li>
+								</ul>
+							</section>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">¡Trabaja con nosotros!</div>
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-6 col-12-medium">
+									<h2>¿Te gustaría ser parte de nuestros trabajadores?</h2>
+									<p>
+										Si quieres <strong>participar</strong> en esta gran oportunidad como especialista en algún área de la salud, no dudes en
+										contactarte con nosotros, somos un equipo <strong>transparente</strong> y el cual te guiará para hacerlo
+										lo mejor posible.
+									</p>
+								
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Dirección hospital</h3>
+													<p>
+														No se no se no se 1234 <br />
+														Santiago, #12345
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Nuestras redes</h3>
+													<p>
+														<a href="#">linkedin.com/DosAlamos</a><br />
+														<a href="#">facebook.com/DosAlamos</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">contacto@dosalamos.com</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Telefono</h3>
+													<p>
+														(+56 9) 2542 9043
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src='{% static "assets/js/jquery.min.js" %}'></script>
+			<script src='{% static "assets/js/jquery.dropotron.min.js" %}'></script>
+			<script src='{% static "assets/js/browser.min.js" %}'></script>
+			<script src='{% static "assets/js/breakpoints.min.js" %}'></script>
+			<script src='{% static "assets/js/util.js" %}'></script>
+			<script src='{% static "assets/js/main.js" %}'></script>
+
+	</body>
+</html>

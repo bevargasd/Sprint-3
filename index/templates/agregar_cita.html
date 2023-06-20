@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agregar cita</title>
+</head>
+
+<body>
+
+    <style>
+        .containe {
+            width: 450px;
+            margin: auto;
+            background-color: #f2f2f2;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="date"],
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+            width: 95%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        select {
+            padding: 10px;
+            border: none;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+            width: 95%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-animated {
+            background-color: #DE716A;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-animated:hover {
+            background-color: #282b34;
+            transform: scale(1.1);
+        }
+    </style>
+
+    <div class="containe">
+        <h1 style=" text-align: center; font-family:'Franklin Gothic Medium', 'Arial Narrow' , Arial, sans-serif">
+            Agregar cita</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label style="text-align: left; font-family: sans-serif ; "
+                    for="{{ form.fecha.id_for_label }}">Fecha:</label>
+                {{ form.fecha }}
+                {% if form.fecha.errors %}
+                <ul class="errors">
+                    {% for error in form.fecha.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+                <label style="text-align: left; font-family: sans-serif ; "
+                    for="{{ form.hora.id_for_label }}">Hora:</label>
+                {{ form.hora }}
+                {% if form.hora.errors %}
+                <ul class="errors">
+                    {% for error in form.hora.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <br>
+            <div>
+                <label style="text-align: left; font-family: sans-serif ; "
+                    for="{{ form.doctor.id_for_label }}">Doctor:</label>
+                {{ form.doctor }}
+                {% if form.doctor.errors %}
+                <ul class="errors">
+                    {% for error in form.doctor.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <br>
+            <!-- Agrega aquí los campos adicionales que necesites -->
+            <br>
+            <div style="text-align: center;">
+                <container>
+                    <button class="button style3 large btn-animated " type="submit" >Guardar</button>
+                </container>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

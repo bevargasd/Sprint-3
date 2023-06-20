@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de citas</title>
+</head>
+<body>
+    
+    {% if citas %}
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Doctor</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cita in citas %}
+                <tr>
+                    <td>{{ cita.fecha }}</td>
+                    <td>{{ cita.hora }}</td>
+                    <td>{{ cita.doctor }}</td>
+                    <td>{{ cita.doctor.especialidad }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No hay citas disponibles.</p>
+{% endif %}
+    </ul>
+
+    <a href="{% url 'agregar_cita' %}">Agregar cita</a>
+</body>
+</html>
